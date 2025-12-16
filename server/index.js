@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("SkillSync Pro backend running");
+  res.send("SkillSync Pro backend running - Day 2");
 });
 
 app.listen(5000, () => {
