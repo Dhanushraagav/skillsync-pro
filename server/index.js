@@ -2,9 +2,11 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("SkillSync Pro backend running - Day 2");
-});
+app.use(express.json());
+
+const healthRoutes = require("./routes/health.routes");
+
+app.use("/api", healthRoutes);
 
 app.listen(5000, () => {
   console.log("Server started on port 5000");
